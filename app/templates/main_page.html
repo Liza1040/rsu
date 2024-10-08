@@ -1,0 +1,30 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+<div>
+  <div class="row">
+    {% for item in data %}
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="mainpage-footer-block-wrap">
+    <div class="mainpage-footer-block__text">
+      Остались вопросы, скорее звоните, мы Вам подскажем
+    </div>
+    <div class="mainpage-footer-block-contacts_tel">
+      +7 927 859 99 01
+    </div>
+    <div class="mainpage-footer-logo">
+      <img src="{% static 'Logo-big.svg' %}">
+    </div>
+  </div>
+</div>
+{% endblock %}
